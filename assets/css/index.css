@@ -1,0 +1,132 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    height:100vh;
+}
+a{
+    text-decoration: none;
+    color: rgb(14, 13, 13);
+}
+a:hover{
+    text-decoration: underline;
+}
+#nav{
+    display: grid;
+    grid-template-rows:150%;
+    grid-template-columns: 1fr 50px 50px 50px 80px;
+    grid-template-areas: ". gmail image apps-icon signin";
+    font-size:14px;
+}
+#gmail_link{
+    grid-area: gmail;
+    align-self:center;
+    justify-self: center;
+}
+#image_link{
+    grid-area: image;
+    align-self:center;
+    justify-self: center;
+}
+#google_apps_icon{
+    grid-area: apps-icon;
+    align-self:center;
+    justify-self: center;
+}
+#sign_in_btn{
+    grid-area:signin;
+    align-self:center;
+    justify-self: center;
+}
+#signinbtn{
+    background-color: #3f51b5;
+    color:white;
+    padding:5px;
+    font-weight: 100;
+    
+}
+
+#main{
+    display: grid;
+    grid-template-rows: 150px 100px 70px 150px;
+    grid-template-columns:1fr 500px 1fr;
+    grid-template-areas:". logo ."
+    " . search_box ."
+    ". btn_group ."
+    ". available_text ."
+    
+}
+#google_logo{
+    grid-area:logo;
+    justify-self: center;
+    align-self: end;
+}
+#search_box{
+    grid-area:search_box;
+    justify-self: center;
+    align-self: center;
+    width:100%;
+    padding:10px;
+    border-radius: 20px;
+    outline:none;
+}
+#search_box:hover{
+    box-shadow:0px 0px 1px 1px grey;
+}
+#btn_group{
+    grid-area:btn_group;
+    justify-self: center;
+    align-self: start;
+}
+#google_search_btn,#feeling_lucky_btn{
+    padding:10px 10px 10px 10px;
+    font-weight: lighter;
+    border:none;
+    background-color: #f2f2f2;
+    margin-left:15px;
+    cursor:pointer;
+}
+#google_search_btn:hover,#feeling_lucky_btn:hover{
+    box-shadow:0px 0px 1px 1px grey;
+}
+#available_text{
+    grid-area:available_text;
+    justify-self: center;
+    align-self: start;
+}
+
+#footer{
+    display: grid;
+    grid-template-rows: 50px 50px;
+    grid-template-columns: repeat(1,1fr) 500px 1fr 1fr 500px 1fr;
+    position: absolute;
+    bottom: 0;
+    width:100%;
+    background-color: #f2f2f2;
+    grid-template-areas: "country-name . . . . ."
+    ". first . . last .";
+}
+.country-name{
+    grid-area:country-name;
+    align-self:center;
+    justify-self: center;
+    width:100%;
+    margin-left:25px;
+}
+#first{
+    grid-area:first;
+    align-self:center;
+    justify-self: start;
+}
+#first a{
+    padding:0px 0px 0px 25px;
+}
+#last a{
+    padding:0px 0px 0px 25px;
+}
+#last{
+    grid-area:last;
+    align-self:center;
+    justify-self: start;
+}
+
+
+
